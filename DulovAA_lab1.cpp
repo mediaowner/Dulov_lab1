@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <limits>
 
 using namespace std;
 
@@ -34,12 +35,12 @@ private:
     bool pipe_option;
 };
     
-int main(){
+void Menu() {
     int option;
+
     do {
-        cout << "Menu:\n1 - Add tube\n2 - Add KC\n3 - All objects\n4 - Edit tube\n5 - Edit KC\n6 - Save\n7 - Load data\n0 - Exit";
+        cout << "Menu:\n1 - Add pipe\n2 - Add CS\n3 - All objects\n4 - Edit pipe\n5 - Edit CS\n6 - Save\n7 - Load data\n0 - Exit\n";
         cin >> option;
-        
         switch (option)
         {
         case 1:
@@ -47,23 +48,27 @@ int main(){
         case 2:
             break;
         case 3:
-            /* code */
             break;
         case 4:
-            /* code */
             break;
         case 5:
-            /* code */
             break;
         case 6:
-            /* code */
             break;
         case 7:
-            /* code */
             break;
         default:
-            cout << "Error: Incorrect option";
+            cout << "Error: Incorrect input";
         };
-
     } while (option != 0);
+};
+
+
+
+int main(){
+    string pipe_name;
+    float pipe_length;
+    int pipe_diameter;
+    bool pipe_option;
+    Menu();
 }
